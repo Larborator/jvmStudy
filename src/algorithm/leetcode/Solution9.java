@@ -8,7 +8,7 @@ import java.util.Stack;
  * https://leetcode.cn/problems/palindrome-number/
  *
  * @author labuladuo
- * @date 2022/5/12
+ * @date 2022/5/13
  */
 public class Solution9 {
     public boolean myFunction(int x) {
