@@ -1,4 +1,4 @@
-package leetCode;
+package algorithm.leetcode;
 
 /**
  * https://leetcode.cn/problems/reverse-integer/

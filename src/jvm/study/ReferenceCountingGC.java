@@ -1,5 +1,9 @@
-package jvmStudy;
+package jvm.study;
 
+/**
+ * @author labuladuo
+ * @date 2022/5/13
+ */
 public class ReferenceCountingGC {
     public Object instance = null;
     private static final int _1MB = 1024 * 1024;

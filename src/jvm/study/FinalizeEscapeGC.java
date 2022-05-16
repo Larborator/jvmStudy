@@ -1,4 +1,4 @@
-package jvmStudy;
+package jvm.study;
 
 /**
  * @author labuladuo
@@ -24,17 +24,19 @@ public class FinalizeEscapeGC {
         SAVE_HOOK = null;
         System.gc();
         Thread.sleep(500);
-        if (SAVE_HOOK != null)
+        if (SAVE_HOOK != null) {
             SAVE_HOOK.isAlive();
-        else
+        } else {
             System.out.println("no, I'm dead :(");
+        }
 
         SAVE_HOOK = null;
         System.gc();
         Thread.sleep(500);
-        if (SAVE_HOOK != null)
+        if (SAVE_HOOK != null) {
             SAVE_HOOK.isAlive();
-        else
+        } else {
             System.out.println("no, I'm dead :(");
+        }
     }
 }
