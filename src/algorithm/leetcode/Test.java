@@ -1,6 +1,7 @@
 package algorithm.leetcode;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 
 /**
@@ -9,15 +10,14 @@ import java.util.stream.Collectors;
  */
 public class Test {
     public static void main(String[] args) {
-        String str = "DLI, HIVE_C4, HW_MRS, ODPS";
-        HashMap<String, Integer> clusterOrderMap = new HashMap<String, Integer>(8) {{
-            put("ODPS", 0);
-            put("HW_MRS", 1);
-            put("HIVE_C4", 2);
-            put("DLI", 3);
-        }};
-        List<String> strs = Arrays.stream(str.split(",")).sorted(Comparator.comparing(e -> clusterOrderMap.getOrDefault(e.trim(), clusterOrderMap.size()))).collect(Collectors.toList());
-        String res = strs.toString().replace(" ", "");
-        System.out.println(res);
+        List<String> str = new ArrayList<>();
+        str.add("731");
+        str.add("730");
+        str.add("7131");
+        str = str.stream()
+                .map(e -> String.format("%-4s", e).replace(" ", "0"))
+                .map(e -> e.substring(0, 1).concat(".").concat(e.substring(1)))
+                .collect(Collectors.toList());
+        System.out.println(str);
     }
 }
